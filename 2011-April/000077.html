@@ -1,0 +1,144 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Griffith-devel] New search plugin to Interfilmes.com and a	problem
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/griffith-devel/2011-April/index.html" >
+   <LINK REL="made" HREF="mailto:griffith-devel%40lists.berlios.de?Subject=Re%3A%20%5BGriffith-devel%5D%20New%20search%20plugin%20to%20Interfilmes.com%20and%20a%0A%09problem&In-Reply-To=%3CBLU0-SMTP1430BD61C1575CA360F3EB5A9980%40phx.gbl%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000075.html">
+   <LINK REL="Next"  HREF="000076.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Griffith-devel] New search plugin to Interfilmes.com and a	problem</H1>
+    <B>Michael Jahn</B> 
+    <A HREF="mailto:griffith-devel%40lists.berlios.de?Subject=Re%3A%20%5BGriffith-devel%5D%20New%20search%20plugin%20to%20Interfilmes.com%20and%20a%0A%09problem&In-Reply-To=%3CBLU0-SMTP1430BD61C1575CA360F3EB5A9980%40phx.gbl%3E"
+       TITLE="[Griffith-devel] New search plugin to Interfilmes.com and a	problem">mikej06 at hotmail.com
+       </A><BR>
+    <I>Wed Apr 27 21:56:23 CEST 2011</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000075.html">[Griffith-devel] New search plugin to Interfilmes.com and a problem
+</A></li>
+        <LI>Next message: <A HREF="000076.html">[Griffith-devel] New search plugin to Interfilmes.com and a problem
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#77">[ date ]</a>
+              <a href="thread.html#77">[ thread ]</a>
+              <a href="subject.html#77">[ subject ]</a>
+              <a href="author.html#77">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Elencarlos,
+
+first, nice work. I started my python experience the same way. :)
+
+I modified your version of the plugin a little bit.
+The solution for your main problem looks like the following line:
+self.original_url_search = &quot;<A HREF="http://interfilmes.com/busca.%s.html">http://interfilmes.com/busca.%s.html</A>&quot;
+
+I change a little bit more of your code. Feel free to take a look at the
+search functions.
+I really recommend it.
+A little general hint for you: Try to use search patterns which are as
+small as possible. It prevents that the plugin breaks if the web site
+changes a little bit.
+
+Another small hint: It looks to me that you don't use an IDE nor a
+debugger. If you want to develop / maintain more plugins I would suggest
+to use an IDE like SPE
+<A HREF="http://en.wikipedia.org/wiki/Stani%27s_Python_Editor">http://en.wikipedia.org/wiki/Stani%27s_Python_Editor</A>
+or Eclipse.
+
+Michael
+
+Am 27.04.2011 20:22, schrieb Elencarlos Soares:
+&gt;<i> hello people
+</I>&gt;<i>
+</I>&gt;<i> I'm Brazilian programmer, and developed a searchplugin for
+</I>&gt;<i> interfilmes.com site Brazilian Portuguese.
+</I>&gt;<i>
+</I>&gt;<i> But as we call it in Brazil did a 'gambiarra', a quick hack to work.
+</I>&gt;<i>
+</I>&gt;<i> I'll explain.
+</I>&gt;<i>
+</I>&gt;<i> the search url to site interfilmes.com is this:
+</I>&gt;<i> 'www.interfilmes.com/busca.' + titulo + '.html'
+</I>&gt;<i> example: <A HREF="http://www.interfilmes.com/busca.casa">http://www.interfilmes.com/busca.casa</A> do lago.html
+</I>&gt;<i>
+</I>&gt;<i> but the existing search plugins use url like 'www.site.com/?q =' + title
+</I>&gt;<i>
+</I>&gt;<i> the quick hack I did was this:
+</I>&gt;<i>
+</I>&gt;<i> no PluginMovieInterfilmes.py
+</I>&gt;<i>
+</I>&gt;<i> class SearchPlugin(movie.SearchMovie):
+</I>&gt;<i>     def __init__(self):
+</I>&gt;<i>         self.original_url_search = &quot;<A HREF="http://interfilmes.com/busca.">http://interfilmes.com/busca.</A>&quot;
+</I>&gt;<i> #### + self.title + &quot;.html&quot;
+</I>&gt;<i>         self.translated_url_search = self.original_url_search
+</I>&gt;<i>
+</I>&gt;<i> and in movie.py I did:
+</I>&gt;<i>
+</I>&gt;<i> def open_search(self, parent_window):
+</I>&gt;<i>         self.titles = [&quot;&quot;]
+</I>&gt;<i>         self.ids = [&quot;&quot;]
+</I>&gt;<i>         if self.url.find('%s') &gt; 0:
+</I>&gt;<i>             self.url = self.url % self.title
+</I>&gt;<i>             self.url = string.replace(self.url, ' ', '%20')
+</I>&gt;<i>         else:
+</I>&gt;<i>             if self.url == &quot;<A HREF="http://interfilmes.com/busca.">http://interfilmes.com/busca.</A>&quot;:
+</I>&gt;<i>                 self.url = string.replace(self.url + self.title +
+</I>&gt;<i> '.html', ' ', '%20')
+</I>&gt;<i>             else:
+</I>&gt;<i>                 self.url = string.replace(self.url + self.title, ' ', '%20')
+</I>&gt;<i>
+</I>&gt;<i> I would like a help. is required pass the title of the film before  to
+</I>&gt;<i> generate the url search
+</I>&gt;<i> how to solve it without modifying the movie.py?
+</I>&gt;<i>
+</I>&gt;<i> PS. is the first time I code something in Python.  I'm still learning.
+</I>&gt;<i> and my English is google translate, excuse the poor grammar
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> Griffith-devel mailing list
+</I>&gt;<i> <A HREF="https://lists.berlios.de/mailman/listinfo/griffith-devel">Griffith-devel at lists.berlios.de</A>
+</I>&gt;<i> <A HREF="https://lists.berlios.de/mailman/listinfo/griffith-devel">https://lists.berlios.de/mailman/listinfo/griffith-devel</A>
+</I>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="https://lists.berlios.de/pipermail/griffith-devel/attachments/20110427/6945446e/attachment.html">https://lists.berlios.de/pipermail/griffith-devel/attachments/20110427/6945446e/attachment.html</A>&gt;
+-------------- next part --------------
+An embedded and charset-unspecified text was scrubbed...
+Name: PluginMovieInterfilmes.py
+URL: &lt;<A HREF="https://lists.berlios.de/pipermail/griffith-devel/attachments/20110427/6945446e/attachment.ksh">https://lists.berlios.de/pipermail/griffith-devel/attachments/20110427/6945446e/attachment.ksh</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000075.html">[Griffith-devel] New search plugin to Interfilmes.com and a problem
+</A></li>
+	<LI>Next message: <A HREF="000076.html">[Griffith-devel] New search plugin to Interfilmes.com and a problem
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#77">[ date ]</a>
+              <a href="thread.html#77">[ thread ]</a>
+              <a href="subject.html#77">[ subject ]</a>
+              <a href="author.html#77">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/griffith-devel">More information about the Griffith-devel
+mailing list</a><br>
+</body></html>

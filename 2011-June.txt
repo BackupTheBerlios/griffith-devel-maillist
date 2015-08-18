@@ -1,0 +1,21 @@
+From jelle at vdwaa.nl  Sun Jun 12 22:53:39 2011
+From: jelle at vdwaa.nl (Jelle van der Waa)
+Date: Sun, 12 Jun 2011 22:53:39 +0200
+Subject: [Griffith-devel] Sqlalchemy  patch
+Message-ID: <4DF52753.9080008@vdwaa.nl>
+
+Hi,
+
+Since the new python sqlalchemy release griffith needs  a patch to run 
+with the new  sqlalchemy 0.7.1.
+I made a patch and attached it or get it from 
+http://pkgbuild.com/~jelle/griffith-sqlalchemy.patch
+
+-- 
+Jelle van der Waa
+
+-------------- next part --------------
+An embedded and charset-unspecified text was scrubbed...
+Name: griffith-sqlalchemy.patch
+URL: <https://lists.berlios.de/pipermail/griffith-devel/attachments/20110612/21ed23b6/attachment.ksh>
+

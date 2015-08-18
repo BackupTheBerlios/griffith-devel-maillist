@@ -1,0 +1,120 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Griffith-devel] New search plugin to Interfilmes.com and a problem
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/griffith-devel/2011-April/index.html" >
+   <LINK REL="made" HREF="mailto:griffith-devel%40lists.berlios.de?Subject=Re%3A%20%5BGriffith-devel%5D%20New%20search%20plugin%20to%20Interfilmes.com%20and%20a%20problem&In-Reply-To=%3CBANLkTin0jzw5t1dOO5SQBz_Uy4m_Z1t%3DYw%40mail.gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000074.html">
+   <LINK REL="Next"  HREF="000077.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Griffith-devel] New search plugin to Interfilmes.com and a problem</H1>
+    <B>Elencarlos Soares</B> 
+    <A HREF="mailto:griffith-devel%40lists.berlios.de?Subject=Re%3A%20%5BGriffith-devel%5D%20New%20search%20plugin%20to%20Interfilmes.com%20and%20a%20problem&In-Reply-To=%3CBANLkTin0jzw5t1dOO5SQBz_Uy4m_Z1t%3DYw%40mail.gmail.com%3E"
+       TITLE="[Griffith-devel] New search plugin to Interfilmes.com and a problem">elencarlos at gmail.com
+       </A><BR>
+    <I>Wed Apr 27 20:22:10 CEST 2011</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000074.html">[Griffith-devel] patch for searching for any field
+</A></li>
+        <LI>Next message: <A HREF="000077.html">[Griffith-devel] New search plugin to Interfilmes.com and a	problem
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#75">[ date ]</a>
+              <a href="thread.html#75">[ thread ]</a>
+              <a href="subject.html#75">[ subject ]</a>
+              <a href="author.html#75">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>hello&#160;people
+
+I'm&#160;Brazilian programmer,&#160;and developed&#160;a&#160;searchplugin&#160;for
+interfilmes.com site Brazilian Portuguese.
+
+But as we call it in Brazil did a 'gambiarra', a quick hack to work.
+
+I'll explain.
+
+the search url to site interfilmes.com is this:
+'www.interfilmes.com/busca.' + titulo + '.html'
+example: <A HREF="http://www.interfilmes.com/busca.casa">http://www.interfilmes.com/busca.casa</A> do lago.html
+
+but the existing search plugins use url like 'www.site.com/?q =' + title
+
+the quick hack I did was this:
+
+no PluginMovieInterfilmes.py
+
+class SearchPlugin(movie.SearchMovie):
+    def __init__(self):
+        self.original_url_search = &quot;<A HREF="http://interfilmes.com/busca.">http://interfilmes.com/busca.</A>&quot;
+#### + self.title + &quot;.html&quot;
+        self.translated_url_search = self.original_url_search
+
+and in movie.py I did:
+
+def open_search(self, parent_window):
+        self.titles = [&quot;&quot;]
+        self.ids = [&quot;&quot;]
+        if self.url.find('%s') &gt; 0:
+            self.url = self.url % self.title
+            self.url = string.replace(self.url, ' ', '%20')
+        else:
+            if self.url == &quot;<A HREF="http://interfilmes.com/busca.">http://interfilmes.com/busca.</A>&quot;:
+                self.url = string.replace(self.url + self.title +
+'.html', ' ', '%20')
+            else:
+                self.url = string.replace(self.url + self.title, ' ', '%20')
+
+I would like a help. is required pass the title of the film before  to
+generate the url search
+how to solve it without modifying the movie.py?
+
+PS. is the first time I code something in Python.  I'm still learning.
+and my English is google translate, excuse the poor grammar
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: movie.py
+Type: application/octet-stream
+Size: 15056 bytes
+Desc: not available
+URL: &lt;<A HREF="https://lists.berlios.de/pipermail/griffith-devel/attachments/20110427/264e7342/attachment.obj">https://lists.berlios.de/pipermail/griffith-devel/attachments/20110427/264e7342/attachment.obj</A>&gt;
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: PluginMovieInterfilmes.py
+Type: application/octet-stream
+Size: 5342 bytes
+Desc: not available
+URL: &lt;<A HREF="https://lists.berlios.de/pipermail/griffith-devel/attachments/20110427/264e7342/attachment-0001.obj">https://lists.berlios.de/pipermail/griffith-devel/attachments/20110427/264e7342/attachment-0001.obj</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000074.html">[Griffith-devel] patch for searching for any field
+</A></li>
+	<LI>Next message: <A HREF="000077.html">[Griffith-devel] New search plugin to Interfilmes.com and a	problem
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#75">[ date ]</a>
+              <a href="thread.html#75">[ thread ]</a>
+              <a href="subject.html#75">[ subject ]</a>
+              <a href="author.html#75">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/griffith-devel">More information about the Griffith-devel
+mailing list</a><br>
+</body></html>

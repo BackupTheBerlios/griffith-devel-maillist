@@ -1,0 +1,125 @@
+From pantano.luigi at gmail.com  Fri May  9 08:58:13 2008
+From: pantano.luigi at gmail.com (Luigi Pantano)
+Date: Fri, 9 May 2008 08:58:13 +0200
+Subject: [Griffith-devel] PluginExportPDF 0.4 patch
+Message-ID: <8db1e3700805082358p6e6dace0tb78ae756c93b409f@mail.gmail.com>
+
+I corrected the schedule of PDF's exportation. Now files are organized
+in Letters, and I modifyed the position of film's elements:  title,
+original_title, director, number, genre, cast
+
+See output.jpg.
+
+
+Original text:
+Ho riveduto e corretto il comportamente del modulo di esportazione per
+il formato PDF. Adesso gli oggetti sono raggruppati per Lettera,
+inoltre ? stata modificata la posizione degli elementi del film:
+title, original_title, director, number, genre, cast
+
+-- 
+Luigi Pantano
+---------------------------------------------------------------------------
+Contatti:
+jabber: bornfreethinker at jabber.linux.it
+wengo: fr33th1nk3r
+ekiga: sip:bornfreethinker at ekiga.net
+-------------- next part --------------
+An embedded and charset-unspecified text was scrubbed...
+Name: diff.txt
+URL: <https://lists.berlios.de/pipermail/griffith-devel/attachments/20080509/9cac0289/attachment.txt>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: output.jpg
+Type: image/jpeg
+Size: 24087 bytes
+Desc: not available
+URL: <https://lists.berlios.de/pipermail/griffith-devel/attachments/20080509/9cac0289/attachment.jpg>
+
+From pantano.luigi at gmail.com  Sat May 10 09:47:24 2008
+From: pantano.luigi at gmail.com (Luigi Pantano)
+Date: Sat, 10 May 2008 09:47:24 +0200
+Subject: [Griffith-devel] test
+Message-ID: <8db1e3700805100047p2415d947x5b1d1f7e76594833@mail.gmail.com>
+
+is ok?
+
+-- 
+Luigi Pantano
+---------------------------------------------------------------------------
+Contatti:
+jabber: bornfreethinker at jabber.linux.it
+wengo: fr33th1nk3r
+ekiga: sip:bornfreethinker at ekiga.net
+
+
+From mikej06 at hotmail.com  Sat May 10 22:45:26 2008
+From: mikej06 at hotmail.com (Michael Jahn)
+Date: Sat, 10 May 2008 20:45:26 +0000
+Subject: [Griffith-devel] PluginExportPDF 0.4 patch
+Message-ID: <BLU106-W46CC879F4EBB01B077E288A9D20@phx.gbl>
+
+
+I committed the changes in revision 949. Looks very nice. Good work.
+
+I added "_('Genre')" and "_('Cast')" for the internationalization and 
+fixed the missing encoding for
+genre and cast data.
+
+Thanks a lot.
+
+Michael
+
+Luigi Pantano schrieb:
+> I corrected the schedule of PDF's exportation. Now files are organized
+> in Letters, and I modifyed the position of film's elements:  title,
+> original_title, director, number, genre, cast
+>
+> See output.jpg.
+>
+>
+> Original text:
+> Ho riveduto e corretto il comportamente del modulo di esportazione per
+> il formato PDF. Adesso gli oggetti sono raggruppati per Lettera,
+> inoltre ? stata modificata la posizione degli elementi del film:
+> title, original_title, director, number, genre, cast
+>
+>   
+> ------------------------------------------------------------------------
+>
+> ------------------------------------------------------------------------
+>
+> _______________________________________________
+> Griffith-devel mailing list
+> Griffith-devel at lists.berlios.de
+> https://lists.berlios.de/mailman/listinfo/griffith-devel
+
+
+
+_________________________________________________________________
+Neu: Mit Live Search Ihre Stadt in der Vogelperspektive!
+http://maps.live.de
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/griffith-devel/attachments/20080510/a17ae606/attachment.html>
+
+From pantano.luigi at gmail.com  Mon May 12 22:44:12 2008
+From: pantano.luigi at gmail.com (Luigi Pantano)
+Date: Mon, 12 May 2008 22:44:12 +0200
+Subject: [Griffith-devel] PluginExportPDF 0.4.1 patch
+Message-ID: <8db1e3700805121344y3c6fbeb2v2d31ab6c9d11f818@mail.gmail.com>
+
+the numbers are grouped in a single group: '0-9'
+
+-- 
+Luigi Pantano
+---------------------------------------------------------------------------
+Contatti:
+jabber: bornfreethinker at jabber.linux.it
+wengo: fr33th1nk3r
+ekiga: sip:bornfreethinker at ekiga.net
+-------------- next part --------------
+An embedded and charset-unspecified text was scrubbed...
+Name: diff.txt
+URL: <https://lists.berlios.de/pipermail/griffith-devel/attachments/20080512/eea0818a/attachment.txt>
+

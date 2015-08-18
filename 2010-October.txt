@@ -1,0 +1,56 @@
+From fetchinson at googlemail.com  Thu Oct 28 00:30:41 2010
+From: fetchinson at googlemail.com (Daniel Fetchinson)
+Date: Thu, 28 Oct 2010 00:30:41 +0200
+Subject: [Griffith-devel] tried griffith, back with first questions
+Message-ID: <AANLkTimoT+kZnXx9jof2OgPLDF3vfDz6yrgTZePihGXP@mail.gmail.com>
+
+Hi folks,
+
+I just installed svn trunk and have to say I'm very pleased with griffith!
+Thanks a lot to all who has worked on this great application!
+
+Since documentation is quite scarce (non-existent :)) I'd like to ask
+a couple of questions here:
+
+1.
+
+I have hundreds of movied on both my local file system and on an
+external hard drive. My original intention was using griffith for
+cataloguing these films but couldn't find a way of automatically
+importing all films at once. The format for each avi file is similar
+to this:
+
+scorsese-1990-goodfellas.avi
+
+i.e. it is director-date-title.avi and if the title has spaces in it,
+it is replaced by an underscore as in
+
+leigh-1996-secrets_and_lies.avi
+
+so the ideal thing would be if I could feed griffith the directory
+where these are stored and it would walk the entire directory
+structure recursively and add all films. I'm guessing I need to write
+some sort of a plugin for this.
+
+Can you provide some pointers where I need to look in the source for this?
+
+2.
+
+When I launch griffith with the --debug option I see tons of
+deprecation warnings. Are there plans to fix these? Should patches be
+submitted?
+
+3.
+
+Is there any support for storing information about subtitle files?
+
+Well, that's about it for now :)
+
+Cheers,
+Daniel
+
+
+-- 
+Psss, psss, put it down! - http://www.cafepress.com/putitdown
+
+

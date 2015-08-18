@@ -1,0 +1,249 @@
+From mikej06 at hotmail.com  Thu May  5 22:24:41 2011
+From: mikej06 at hotmail.com (Michael Jahn)
+Date: Thu, 5 May 2011 22:24:41 +0200
+Subject: [Griffith-devel] patch for searching for any field
+In-Reply-To: <BANLkTimjaOZsNudMbjmTWh3sN5h2sEhjcA@mail.gmail.com>
+References: <BANLkTincQ=4RhOUP09PpfyV75iEJNBU1EA@mail.gmail.com>	<20110412114236.GD19405@piotro.eu>	<BANLkTimeeoKJXG59c8Fj7Qy8Py4aZzDiew@mail.gmail.com>	<BANLkTikx_jty6jSXxiyXM9jNO4CbOFQA2Q@mail.gmail.com>	<BLU0-SMTP1765E6C5B44B40139CB24B0A9AB0@phx.gbl>	<BANLkTim0nCTiGimh8djcyM5N+sq-=Mod-A@mail.gmail.com>	<BANLkTi=wEz71NzsEjE40Sx7pibj01Np6Kw@mail.gmail.com>	<BLU0-SMTP147E769AEDDA07336976AE9A9960@phx.gbl>	<BANLkTi=BhgLbVZJnXNa4Wz7y1ueF3ewSMw@mail.gmail.com>	<BLU0-SMTP1906013C85896076D292D0A9990@phx.gbl>
+	<BANLkTimjaOZsNudMbjmTWh3sN5h2sEhjcA@mail.gmail.com>
+Message-ID: <BLU0-SMTP210F7E3AC72DAB94F579BA4A9800@phx.gbl>
+
+Sorry, I don't know. I tried different shortcuts but I didn't find any
+to jump to the next result.
+
+Am 27.04.2011 12:40, schrieb Daniel Fetchinson:
+>> We talk about different things.
+> Probably!
+>
+>> Typeahead search works directly within the main list.
+>> Set the focus at any movie entry in the main list and then just type in
+>> the part of a movie or director.
+>> While your are typing the focus jumps through the list to the next
+>> matching entry.
+> Wow, I did not know that! Pretty cool, one question: if the first
+> match is found, how do I jump to the next matching entry and then the
+> next?
+>
+>> It works without using the drop down list.
+>>
+>> The answer for your question:
+>> You don't have to edit the glade files. The entries in the drop down
+>> list are generated in the code.
+>> Look into the file initialize.py, function
+>> def dictionaries(self):
+>> in line 771:
+>> self.search_criteria = (
+>> Here is the list of the defined fields. Every field in search_criteria
+>> needs an entry in the following
+>> list field_names with the same key.
+>> The main problem is that field_names should only contain physically
+>> existing database columns I think.
+>> I didn't try to add non-db fields.
+>> So I think it would be better if you add the entry 'Any' to the list
+>> search_criteria_sorted
+>> in line 732 before the loop
+>> for criteria in sorted_criterias:
+> Thanks a lot, this helps a lot, I'll try implementing this.
+>
+> Cheers,
+> Daniel
+>
+>
+>> ...
+>>
+>> Michael
+>>
+>> Am 26.04.2011 14:12, schrieb Daniel Fetchinson:
+>>>> Perhaps I'm wrong but I thought it would partiallly fit your needs to
+>>>> look for a movie by just typing in a part of the title or director.
+>>>> Without opening an extra window.
+>>> If I type in part of the title I only get the right result if 'Title'
+>>> is selected from the drop down list. Similarly if I type in part of
+>>> the director I get the right result only if 'Director' is selected
+>>> from said list.
+>>>
+>>> What I'm after is an item on the drop down list called 'Any' which I
+>>> would set for my default and then typing in either the title or the
+>>> director (or any other field) would give me the expected result. In
+>>> this way you only have to type and don't have to select anything so
+>>> this way of doing things would be the fastest and most convenient.
+>>>
+>>> By the way, the only thing I'm missing at the moment is a little help
+>>> with glade (the actual query in python is done now) so that really a
+>>> new item on the drop down list would appear. I'm guessing I have to
+>>> modify some of the .glade files, but don't know how. Is anyone
+>>> familiar with glade? Are these files edited by hand or only through
+>>> glade-2 or glade-3?
+>>>
+>>> Cheers,
+>>> Daniel
+>>>
+>>>
+>>>
+>>>
+>>>>>>> Do you know the type ahead feature of the main list?
+>>>>>> No, I don't. But sounds good, what is it?
+>>>>> You mean perhaps the feature that as I type the already typed query
+>>>>> gets searched for within a predefined short time interval? Yeah, I
+>>>>> know that one, it's pretty cool!
+>>>>> But how does this has to do with the ability to search for *any* field
+>>>>> from the main list?
+>>>>>
+>>>>> Cheers,
+>>>>> Daniel
+>>>>>
+>>>>>
+>>>>>>>>>>> I'm sending a patch against trunk which makes it possible to
+>>>>>>>>>>> search
+>>>>>>>>>>> for many fields ( 'director', 'title', 'original_title',
+>>>>>>>>>>> 'cameraman',
+>>>>>>>>>>> 'cast', 'year', 'country', 'notes' ) at once, i.e. all of them
+>>>>>>>>>>> OR'd
+>>>>>>>>>>> together.
+>>>>>>>>>>>
+>>>>>>>>>>> The patch only touches lib/quick_filter.py and in order to have
+>>>>>>>>>>> this
+>>>>>>>>>> what's wrong with advance filter window (wich allows this and much
+>>>>>>>>>> more)?
+>>>>>>>>> There is nothing wrong with that in terms of "what's possible", it's
+>>>>>>>>> more like a usability feature. I think it's much more convenient to
+>>>>>>>>> type whatever comes to mind (director, title, etc) into a field that
+>>>>>>>>> is always there than opening up a second window and typing things
+>>>>>>>>> into
+>>>>>>>>> their respective fields.
+>>>>>>>>>
+>>>>>>>>> So I'd ask, "what's wrong with making things simpler from a user
+>>>>>>>>> experience point of view?"  :)
+>>>>>>>>>
+>>>>>>>>> The music catalogue software rhythmbox (which is very much like
+>>>>>>>>> griffith only for audio) allows for a quick search for any field on
+>>>>>>>>> its main window and I have to say I love the feature (and rhythmbox
+>>>>>>>>> gave me the idea that I should patch griffith in this way).
+>>>>>>>> I included a new patch because I used 'original_title' in place of
+>>>>>>>> 'o_title' in the previous one.
+>>>>>>>>
+>>>>>>>> Cheers,
+>>>>>>>> Daniel
+>>>>>>>>
+>>>>>>>>
+>>>>>>>>
+>>>>>>>>
+>>>>>>>> _______________________________________________
+>>>>>>>> Griffith-devel mailing list
+>>>>>>>> Griffith-devel at lists.berlios.de
+>>>>>>>> https://lists.berlios.de/mailman/listinfo/griffith-devel
+>>>>>> --
+>>>>>> Psss, psss, put it down! - http://www.cafepress.com/putitdown
+>>>>>>
+>>>> _______________________________________________
+>>>> Griffith-devel mailing list
+>>>> Griffith-devel at lists.berlios.de
+>>>> https://lists.berlios.de/mailman/listinfo/griffith-devel
+>>>>
+>> _______________________________________________
+>> Griffith-devel mailing list
+>> Griffith-devel at lists.berlios.de
+>> https://lists.berlios.de/mailman/listinfo/griffith-devel
+>>
+>
+
+
+
+From fetchinson at googlemail.com  Sun May 15 14:36:58 2011
+From: fetchinson at googlemail.com (Daniel Fetchinson)
+Date: Sun, 15 May 2011 14:36:58 +0200
+Subject: [Griffith-devel] patch ready for quick searching any field
+Message-ID: <BANLkTinUsieiFiv0+hksKrJa+=xyUdzqeA@mail.gmail.com>
+
+Hi folks,
+
+Thanks for all the advice on adding the 'Any' column in the drop down
+many on the main window for searching for (almost) any field. I found
+that including ( 'director', 'title', 'o_title', 'cameraman', 'cast',
+'year' ) is the most useful option, not too many and not too few. The
+patch is attached, or should I send patches to
+https://bugs.launchpad.net/griffith ?
+
+Michael, I followed your advice and modified the already sorted list
+self.search_criteria_sorted in the function combos in initialize.py.
+
+Cheers,
+Daniel
+
+
+
+
+-- 
+Psss, psss, put it down! - http://www.cafepress.com/putitdown
+
+
+From fetchinson at googlemail.com  Mon May 16 12:43:40 2011
+From: fetchinson at googlemail.com (Daniel Fetchinson)
+Date: Mon, 16 May 2011 12:43:40 +0200
+Subject: [Griffith-devel] patch ready for quick searching any field
+In-Reply-To: <BANLkTinUsieiFiv0+hksKrJa+=xyUdzqeA@mail.gmail.com>
+References: <BANLkTinUsieiFiv0+hksKrJa+=xyUdzqeA@mail.gmail.com>
+Message-ID: <BANLkTikbfeO+TcFWbXJzhEv0pJ+YgbcPCQ@mail.gmail.com>
+
+> Thanks for all the advice on adding the 'Any' column in the drop down
+> many on the main window for searching for (almost) any field. I found
+> that including ( 'director', 'title', 'o_title', 'cameraman', 'cast',
+> 'year' ) is the most useful option, not too many and not too few. The
+> patch is attached, or should I send patches to
+> https://bugs.launchpad.net/griffith ?
+>
+> Michael, I followed your advice and modified the already sorted list
+> self.search_criteria_sorted in the function combos in initialize.py.
+
+Oooops, I forgot to attach the file to the previous email, here it goes now.
+
+Cheers,
+Daniel
+
+-- 
+Psss, psss, put it down! - http://www.cafepress.com/putitdown
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: search_any_field.patch
+Type: application/octet-stream
+Size: 1894 bytes
+Desc: not available
+URL: <https://lists.berlios.de/pipermail/griffith-devel/attachments/20110516/4a2a7403/attachment.obj>
+
+From mikej06 at hotmail.com  Wed May 18 14:57:00 2011
+From: mikej06 at hotmail.com (Michael Jahn)
+Date: Wed, 18 May 2011 14:57:00 +0200
+Subject: [Griffith-devel] patch ready for quick searching any field
+In-Reply-To: <BANLkTikbfeO+TcFWbXJzhEv0pJ+YgbcPCQ@mail.gmail.com>
+References: <BANLkTinUsieiFiv0+hksKrJa+=xyUdzqeA@mail.gmail.com>
+	<BANLkTikbfeO+TcFWbXJzhEv0pJ+YgbcPCQ@mail.gmail.com>
+Message-ID: <BLU0-SMTP91C5B05E69338326A5D171A98F0@phx.gbl>
+
+I committed the patch.
+Thanks a lot!
+
+Am 16.05.2011 12:43, schrieb Daniel Fetchinson:
+>> Thanks for all the advice on adding the 'Any' column in the drop down
+>> many on the main window for searching for (almost) any field. I found
+>> that including ( 'director', 'title', 'o_title', 'cameraman', 'cast',
+>> 'year' ) is the most useful option, not too many and not too few. The
+>> patch is attached, or should I send patches to
+>> https://bugs.launchpad.net/griffith ?
+>>
+>> Michael, I followed your advice and modified the already sorted list
+>> self.search_criteria_sorted in the function combos in initialize.py.
+> Oooops, I forgot to attach the file to the previous email, here it goes now.
+>
+> Cheers,
+> Daniel
+>
+>
+>
+> _______________________________________________
+> Griffith-devel mailing list
+> Griffith-devel at lists.berlios.de
+> https://lists.berlios.de/mailman/listinfo/griffith-devel
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/griffith-devel/attachments/20110518/0f695624/attachment.html>
+

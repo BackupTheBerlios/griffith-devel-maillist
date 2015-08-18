@@ -1,0 +1,34 @@
+From vasco.m.nunes at gmail.com  Tue Mar  4 17:44:01 2008
+From: vasco.m.nunes at gmail.com (Vasco Nunes)
+Date: Tue, 4 Mar 2008 16:44:01 +0000
+Subject: [Griffith-devel] Serbian translation corrections
+In-Reply-To: <f441b0c90802240702u5ea8a09akf14ce4e984160f6c@mail.gmail.com>
+References: <f441b0c90802240702u5ea8a09akf14ce4e984160f6c@mail.gmail.com>
+Message-ID: <bf6fc4cb0803040844q55544b43t30a6b6ce16281d5c@mail.gmail.com>
+
+Commited to svn. Thanks a lot.
+
+Greetings,
+Vasco Nunes
+
+On Sun, Feb 24, 2008 at 3:02 PM, Sasa Petrovic <kapetance at gmail.com> wrote:
+> Hello.
+> I made few corrections and now I am sending updated version of Serbian
+> translation
+>
+>
+>
+> _______________________________________________
+>  Griffith-devel mailing list
+>  Griffith-devel at lists.berlios.de
+>  https://lists.berlios.de/mailman/listinfo/griffith-devel
+>
+>
+
+
+
+-- 
+Vasco Nunes
+<vasco.m.nunes at gmail.com>
+
+

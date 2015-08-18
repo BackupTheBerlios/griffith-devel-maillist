@@ -1,0 +1,216 @@
+From kapetance at gmail.com  Fri Feb  8 16:49:47 2008
+From: kapetance at gmail.com (Sasa Petrovic)
+Date: Fri, 8 Feb 2008 16:49:47 +0100
+Subject: [Griffith-devel] (no subject)
+Message-ID: <f441b0c90802080749s4763169bl23d0c09fa816da9a@mail.gmail.com>
+
+Hello,
+I am not sure if this is the right way for uploading translation. If it is
+OK then I am sending Serbian translation of Griffith
+
+
+Sasa Petrovic
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/griffith-devel/attachments/20080208/8133866d/attachment.html>
+
+From kapetance at gmail.com  Fri Feb  8 16:54:11 2008
+From: kapetance at gmail.com (Sasa Petrovic)
+Date: Fri, 8 Feb 2008 16:54:11 +0100
+Subject: [Griffith-devel] Serbian translation
+Message-ID: <f441b0c90802080754g4cc4c9aew330c50d75c3efbfd@mail.gmail.com>
+
+Hello,
+I am not sure if this is the right way for uploading translation. If it is
+OK then I am sending Serbian translation of Griffith
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/griffith-devel/attachments/20080208/3d8c2f75/attachment.html>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: sr.po.tar.gz
+Type: application/x-gzip
+Size: 15039 bytes
+Desc: not available
+URL: <https://lists.berlios.de/pipermail/griffith-devel/attachments/20080208/3d8c2f75/attachment.bin>
+
+From ozarow at gmail.com  Sat Feb  9 20:00:35 2008
+From: ozarow at gmail.com (Piotr Ozarowski)
+Date: Sat, 9 Feb 2008 20:00:35 +0100
+Subject: [Griffith-devel] Serbian translation
+In-Reply-To: <f441b0c90802080754g4cc4c9aew330c50d75c3efbfd@mail.gmail.com>
+References: <f441b0c90802080754g4cc4c9aew330c50d75c3efbfd@mail.gmail.com>
+Message-ID: <20080209190035.GC3166@pox.one.pl>
+
+Hi Sasa
+
+[Sasa Petrovic, 2008-02-08T18:10]
+> I am not sure if this is the right way for uploading translation. If it is
+> OK then I am sending Serbian translation of Griffith
+
+yes, it's the right place, thanks!
+
+(I will add it also to launchpad [1])
+
+[1] https://translations.launchpad.net/griffith/
+-- 
+-=[     Piotr Ozarowski     ]=-
+-=[ http://www.ozarowski.pl ]=-
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: not available
+Type: application/pgp-signature
+Size: 189 bytes
+Desc: not available
+URL: <https://lists.berlios.de/pipermail/griffith-devel/attachments/20080209/eccf3162/attachment.pgp>
+
+From mikej06 at hotmail.com  Tue Feb 12 16:30:28 2008
+From: mikej06 at hotmail.com (Michael Jahn)
+Date: Tue, 12 Feb 2008 15:30:28 +0000
+Subject: [Griffith-devel] Griffith 0.9.6 release plans
+In-Reply-To: <bf6fc4cb0801140323m7563a76fi11a0bcc91cfa701c@mail.gmail.com>
+References: <BAY137-W2CC50FE93D913805A188AA9450@phx.gbl>
+	<20080113225756.GA3356@pox.one.pl> 
+	<bf6fc4cb0801140323m7563a76fi11a0bcc91cfa701c@mail.gmail.com>
+Message-ID: <BAY137-W31566E09C4D1934D3A7148A92B0@phx.gbl>
+
+
+Should I build a windows version ?
+
+Michael
+
+> Date: Mon, 14 Jan 2008 11:23:28 +0000
+> From: vasco.m.nunes at gmail.com
+> To: griffith-devel at lists.berlios.de
+> Subject: Re: [Griffith-devel] Griffith 0.9.6 release plans
+> 
+> I will try to fix portuguese plugins tonight. I'm afraid I will not
+> make it earlier.
+> 
+> Vasco
+> 
+> On Jan 13, 2008 10:57 PM, Piotr O?arowski <ozarow at gmail.com> wrote:
+> > [Michael Jahn, 13.01.2008]
+> > > I don't find the time to fix the amazon interface before the 0.9.6 release.
+> > > It's not a critical error. I think the new version of griffith can be
+> > > released without a fix for that.
+> >
+> > SQLAlchemy is already in 0.9.x branch, I will check all reported bugs
+> > and Polish movie plugins tomorrow.
+> > --
+> >
+> > -=[     Piotr Ozarowski     ]=-
+> > -=[ http://www.ozarowski.pl ]=-
+> >
+> > _______________________________________________
+> > Griffith-devel mailing list
+> > Griffith-devel at lists.berlios.de
+> > https://lists.berlios.de/mailman/listinfo/griffith-devel
+> >
+> >
+> 
+> 
+> 
+> -- 
+> Vasco Nunes
+> <vasco.m.nunes at gmail.com>
+> _______________________________________________
+> Griffith-devel mailing list
+> Griffith-devel at lists.berlios.de
+> https://lists.berlios.de/mailman/listinfo/griffith-devel
+
+_________________________________________________________________
+Kostenlose Messenger Emoticons! Hier downloaden!
+http://messenger.live.de/mein/
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/griffith-devel/attachments/20080212/8a2e3840/attachment.html>
+
+From ozarow at gmail.com  Tue Feb 12 20:20:35 2008
+From: ozarow at gmail.com (Piotr Ozarowski)
+Date: Tue, 12 Feb 2008 20:20:35 +0100
+Subject: [Griffith-devel] Griffith 0.9.6 release plans
+In-Reply-To: <BAY137-W31566E09C4D1934D3A7148A92B0@phx.gbl>
+References: <BAY137-W2CC50FE93D913805A188AA9450@phx.gbl>
+	<20080113225756.GA3356@pox.one.pl>
+	<bf6fc4cb0801140323m7563a76fi11a0bcc91cfa701c@mail.gmail.com>
+	<BAY137-W31566E09C4D1934D3A7148A92B0@phx.gbl>
+Message-ID: <20080212192035.GA3193@pox.one.pl>
+
+[Michael Jahn, 12.02.2008]
+> Should I build a windows version ?
+
+please do (and upload it to ftp.berlios.de/incoming)
+
+-- 
+-=[     Piotr Ozarowski     ]=-
+-=[ http://www.ozarowski.pl ]=-
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: not available
+Type: application/pgp-signature
+Size: 189 bytes
+Desc: not available
+URL: <https://lists.berlios.de/pipermail/griffith-devel/attachments/20080212/d65d9d8c/attachment.pgp>
+
+From mikej06 at hotmail.com  Wed Feb 13 12:30:35 2008
+From: mikej06 at hotmail.com (Michael Jahn)
+Date: Wed, 13 Feb 2008 11:30:35 +0000
+Subject: [Griffith-devel] Griffith 0.9.6 release plans
+In-Reply-To: <20080212192035.GA3193@pox.one.pl>
+References: <BAY137-W2CC50FE93D913805A188AA9450@phx.gbl>
+	<20080113225756.GA3356@pox.one.pl>
+	<bf6fc4cb0801140323m7563a76fi11a0bcc91cfa701c@mail.gmail.com>
+	<BAY137-W31566E09C4D1934D3A7148A92B0@phx.gbl> 
+	<20080212192035.GA3193@pox.one.pl>
+Message-ID: <BAY137-W16471A488F5317DBDB33D3A9240@phx.gbl>
+
+
+Don't use the setup which I uploaded because it is broken. The proxy server didn't
+transmit the last part of the file. About 100k bytes are missing.
+I will try a new upload tonight without a proxy.
+But I can't delete the broken file.
+
+Michael
+
+> Date: Tue, 12 Feb 2008 20:20:35 +0100
+> From: ozarow at gmail.com
+> To: griffith-devel at lists.berlios.de
+> Subject: Re: [Griffith-devel] Griffith 0.9.6 release plans
+> 
+> [Michael Jahn, 12.02.2008]
+> > Should I build a windows version ?
+> 
+> please do (and upload it to ftp.berlios.de/incoming)
+> 
+> -- 
+> -=[     Piotr Ozarowski     ]=-
+> -=[ http://www.ozarowski.pl ]=-
+
+_________________________________________________________________
+Windows Live Fotogalerie: So einfach organisieren Sie Ihre Fotos!
+http://get.live.com/photogallery/overview 
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/griffith-devel/attachments/20080213/d714749c/attachment.html>
+
+From kapetance at gmail.com  Sun Feb 24 16:02:14 2008
+From: kapetance at gmail.com (Sasa Petrovic)
+Date: Sun, 24 Feb 2008 16:02:14 +0100
+Subject: [Griffith-devel] Serbian translation corrections
+Message-ID: <f441b0c90802240702u5ea8a09akf14ce4e984160f6c@mail.gmail.com>
+
+Hello.
+I made few corrections and now I am sending updated version of Serbian
+translation
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/griffith-devel/attachments/20080224/2f352ae2/attachment.html>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: sr.po.tar.gz
+Type: application/x-gzip
+Size: 15062 bytes
+Desc: not available
+URL: <https://lists.berlios.de/pipermail/griffith-devel/attachments/20080224/2f352ae2/attachment.bin>
+

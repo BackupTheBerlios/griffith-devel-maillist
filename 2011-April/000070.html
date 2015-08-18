@@ -1,0 +1,121 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Griffith-devel] patch for searching for any field
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/griffith-devel/2011-April/index.html" >
+   <LINK REL="made" HREF="mailto:griffith-devel%40lists.berlios.de?Subject=Re%3A%20%5BGriffith-devel%5D%20patch%20for%20searching%20for%20any%20field&In-Reply-To=%3CBANLkTi%3DwEz71NzsEjE40Sx7pibj01Np6Kw%40mail.gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000069.html">
+   <LINK REL="Next"  HREF="000071.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Griffith-devel] patch for searching for any field</H1>
+    <B>Daniel Fetchinson</B> 
+    <A HREF="mailto:griffith-devel%40lists.berlios.de?Subject=Re%3A%20%5BGriffith-devel%5D%20patch%20for%20searching%20for%20any%20field&In-Reply-To=%3CBANLkTi%3DwEz71NzsEjE40Sx7pibj01Np6Kw%40mail.gmail.com%3E"
+       TITLE="[Griffith-devel] patch for searching for any field">fetchinson at googlemail.com
+       </A><BR>
+    <I>Sun Apr 24 07:46:27 CEST 2011</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000069.html">[Griffith-devel] patch for searching for any field
+</A></li>
+        <LI>Next message: <A HREF="000071.html">[Griffith-devel] patch for searching for any field
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#70">[ date ]</a>
+              <a href="thread.html#70">[ thread ]</a>
+              <a href="subject.html#70">[ subject ]</a>
+              <a href="author.html#70">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>&gt;&gt;<i> Do you know the type ahead feature of the main list?
+</I>&gt;<i>
+</I>&gt;<i> No, I don't. But sounds good, what is it?
+</I>
+You mean perhaps the feature that as I type the already typed query
+gets searched for within a predefined short time interval? Yeah, I
+know that one, it's pretty cool!
+But how does this has to do with the ability to search for *any* field
+from the main list?
+
+Cheers,
+Daniel
+
+
+&gt;&gt;&gt;&gt;&gt;&gt;<i> I'm sending a patch against trunk which makes it possible to search
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i> for many fields ( 'director', 'title', 'original_title', 'cameraman',
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i> 'cast', 'year', 'country', 'notes' ) at once, i.e. all of them OR'd
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i> together.
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i> The patch only touches lib/quick_filter.py and in order to have this
+</I>&gt;&gt;&gt;&gt;&gt;<i> what's wrong with advance filter window (wich allows this and much
+</I>&gt;&gt;&gt;&gt;&gt;<i> more)?
+</I>&gt;&gt;&gt;&gt;<i> There is nothing wrong with that in terms of &quot;what's possible&quot;, it's
+</I>&gt;&gt;&gt;&gt;<i> more like a usability feature. I think it's much more convenient to
+</I>&gt;&gt;&gt;&gt;<i> type whatever comes to mind (director, title, etc) into a field that
+</I>&gt;&gt;&gt;&gt;<i> is always there than opening up a second window and typing things into
+</I>&gt;&gt;&gt;&gt;<i> their respective fields.
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> So I'd ask, &quot;what's wrong with making things simpler from a user
+</I>&gt;&gt;&gt;&gt;<i> experience point of view?&quot;  :)
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> The music catalogue software rhythmbox (which is very much like
+</I>&gt;&gt;&gt;&gt;<i> griffith only for audio) allows for a quick search for any field on
+</I>&gt;&gt;&gt;&gt;<i> its main window and I have to say I love the feature (and rhythmbox
+</I>&gt;&gt;&gt;&gt;<i> gave me the idea that I should patch griffith in this way).
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> I included a new patch because I used 'original_title' in place of
+</I>&gt;&gt;&gt;<i> 'o_title' in the previous one.
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> Cheers,
+</I>&gt;&gt;&gt;<i> Daniel
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> _______________________________________________
+</I>&gt;&gt;&gt;<i> Griffith-devel mailing list
+</I>&gt;&gt;&gt;<i> <A HREF="https://lists.berlios.de/mailman/listinfo/griffith-devel">Griffith-devel at lists.berlios.de</A>
+</I>&gt;&gt;&gt;<i> <A HREF="https://lists.berlios.de/mailman/listinfo/griffith-devel">https://lists.berlios.de/mailman/listinfo/griffith-devel</A>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> --
+</I>&gt;<i> Psss, psss, put it down! - <A HREF="http://www.cafepress.com/putitdown">http://www.cafepress.com/putitdown</A>
+</I>&gt;<i>
+</I>
+
+-- 
+Psss, psss, put it down! - <A HREF="http://www.cafepress.com/putitdown">http://www.cafepress.com/putitdown</A>
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000069.html">[Griffith-devel] patch for searching for any field
+</A></li>
+	<LI>Next message: <A HREF="000071.html">[Griffith-devel] patch for searching for any field
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#70">[ date ]</a>
+              <a href="thread.html#70">[ thread ]</a>
+              <a href="subject.html#70">[ subject ]</a>
+              <a href="author.html#70">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/griffith-devel">More information about the Griffith-devel
+mailing list</a><br>
+</body></html>

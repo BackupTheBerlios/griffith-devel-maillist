@@ -1,0 +1,82 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Griffith-devel] A small patch
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/griffith-devel/2007-May/index.html" >
+   <LINK REL="made" HREF="mailto:griffith-devel%40lists.berlios.de?Subject=Re%3A%20%5BGriffith-devel%5D%20A%20small%20patch&In-Reply-To=%3C200705182154.56259.guillaume%40guillaumepratte.net%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000004.html">
+   <LINK REL="Next"  HREF="000005.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Griffith-devel] A small patch</H1>
+    <B>Guillaume Pratte</B> 
+    <A HREF="mailto:griffith-devel%40lists.berlios.de?Subject=Re%3A%20%5BGriffith-devel%5D%20A%20small%20patch&In-Reply-To=%3C200705182154.56259.guillaume%40guillaumepratte.net%3E"
+       TITLE="[Griffith-devel] A small patch">guillaume at guillaumepratte.net
+       </A><BR>
+    <I>Sat May 19 03:54:56 CEST 2007</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000004.html">[Griffith-devel] Updated  e-Pipoca plugin (Brazilian movies site)
+</A></li>
+        <LI>Next message: <A HREF="000005.html">[Griffith-devel] Configuration incompatibilities in svn
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#6">[ date ]</a>
+              <a href="thread.html#6">[ thread ]</a>
+              <a href="subject.html#6">[ subject ]</a>
+              <a href="author.html#6">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hello,
+
+I began playing with Griffith's code, and I remarked that debian/control is 
+missing docbook2x as a build dependancy, so here is the patch against svn :
+
+Index: debian/control
+===================================================================
+--- debian/control      (r&#233;vision 759)
++++ debian/control      (copie de travail)
+@@ -2,7 +2,7 @@
+ Section: gnome
+ Priority: optional
+ Maintainer: Piotr Ozarowski &lt;<A HREF="https://lists.berlios.de/mailman/listinfo/griffith-devel">ozarow at gmail.com</A>&gt;
+-Build-Depends: debhelper (&gt;= 5.0.37.2)
++Build-Depends: debhelper (&gt;= 5.0.37.2), docbook2x
+ Build-Depends-Indep: python (&gt;= 2.3.5-11), python-central (&gt;= 0.5)
+ Standards-Version: 3.7.2
+ XS-Python-Version: current, &gt;=2.3
+
+
+Guillaume Pratte
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000004.html">[Griffith-devel] Updated  e-Pipoca plugin (Brazilian movies site)
+</A></li>
+	<LI>Next message: <A HREF="000005.html">[Griffith-devel] Configuration incompatibilities in svn
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#6">[ date ]</a>
+              <a href="thread.html#6">[ thread ]</a>
+              <a href="subject.html#6">[ subject ]</a>
+              <a href="author.html#6">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/griffith-devel">More information about the Griffith-devel
+mailing list</a><br>
+</body></html>

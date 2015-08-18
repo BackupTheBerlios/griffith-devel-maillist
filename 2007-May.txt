@@ -1,0 +1,126 @@
+From joe1310 at terra.com.br  Tue May  1 01:03:28 2007
+From: joe1310 at terra.com.br (Djohnson "Joe" Lima)
+Date: Mon, 30 Apr 2007 20:03:28 -0300
+Subject: [Griffith-devel] Updated  e-Pipoca plugin (Brazilian movies site)
+In-Reply-To: <20070430080317.GU3431@pox.one.pl>
+References: <54b28cacb4f126d3a737f5665c9141b6@griffith.berlios.de>
+	<20070430080317.GU3431@pox.one.pl>
+Message-ID: <463675C0.1090100@terra.com.br>
+
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/griffith-devel/attachments/20070430/9e20b18f/attachment.html>
+-------------- next part --------------
+An embedded and charset-unspecified text was scrubbed...
+Name: PluginMovieE-Pipoca.py
+URL: <https://lists.berlios.de/pipermail/griffith-devel/attachments/20070430/9e20b18f/attachment.ksh>
+
+From guillaume at guillaumepratte.net  Sat May 19 04:00:47 2007
+From: guillaume at guillaumepratte.net (Guillaume Pratte)
+Date: Fri, 18 May 2007 22:00:47 -0400
+Subject: [Griffith-devel] Configuration incompatibilities in svn
+Message-ID: <200705182200.49172.guillaume@guillaumepratte.net>
+
+I just tried Griffith from svn, but I see that the configuration file format 
+has changed and is incompatible with the old :
+
+
+Cannot parse config file
+Traceback (most recent call last):
+  File "/usr/bin/griffith", line 1082, in ?
+    griffith = Griffith()
+  File "/usr/bin/griffith", line 58, in __init__
+    self.config = 
+config.Config(file=os.path.join(self.locations['home'], 'griffith.conf'))
+  File "/usr/share/griffith/lib/config.py", line 34, in __init__
+    self.make_defaults()
+  File "/usr/share/griffith/lib/config.py", line 91, in make_defaults
+    self.cfg.read(self.file)
+  File "/usr/lib/python2.4/ConfigParser.py", line 267, in read
+    self._read(fp, filename)
+  File "/usr/lib/python2.4/ConfigParser.py", line 462, in _read
+    raise MissingSectionHeaderError(fpname, lineno, line)
+ConfigParser.MissingSectionHeaderError: File contains no section headers.
+file: /home/guillaume/.griffith/griffith.conf, line: 1
+'(dp1\n'
+
+
+Is there any plan to have code that will upgrade from the old configuration 
+format?
+
+Guillaume
+
+
+From guillaume at guillaumepratte.net  Sat May 19 03:54:56 2007
+From: guillaume at guillaumepratte.net (Guillaume Pratte)
+Date: Fri, 18 May 2007 21:54:56 -0400
+Subject: [Griffith-devel] A small patch
+Message-ID: <200705182154.56259.guillaume@guillaumepratte.net>
+
+Hello,
+
+I began playing with Griffith's code, and I remarked that debian/control is 
+missing docbook2x as a build dependancy, so here is the patch against svn :
+
+Index: debian/control
+===================================================================
+--- debian/control      (r?vision 759)
++++ debian/control      (copie de travail)
+@@ -2,7 +2,7 @@
+ Section: gnome
+ Priority: optional
+ Maintainer: Piotr Ozarowski <ozarow at gmail.com>
+-Build-Depends: debhelper (>= 5.0.37.2)
++Build-Depends: debhelper (>= 5.0.37.2), docbook2x
+ Build-Depends-Indep: python (>= 2.3.5-11), python-central (>= 0.5)
+ Standards-Version: 3.7.2
+ XS-Python-Version: current, >=2.3
+
+
+Guillaume Pratte
+
+
+From guillaume at guillaumepratte.net  Sat May 19 05:02:44 2007
+From: guillaume at guillaumepratte.net (Guillaume Pratte)
+Date: Fri, 18 May 2007 23:02:44 -0400
+Subject: [Griffith-devel] French translation update
+Message-ID: <200705182302.44400.guillaume@guillaumepratte.net>
+
+Hello,
+
+Here is an update to the French translation file.
+
+Guillaume
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: griffith_svn_fr.po.patch
+Type: text/x-diff
+Size: 22753 bytes
+Desc: not available
+URL: <https://lists.berlios.de/pipermail/griffith-devel/attachments/20070518/a7a71ecb/attachment.patch>
+
+From vasco.m.nunes at gmail.com  Sat May 19 05:14:00 2007
+From: vasco.m.nunes at gmail.com (Vasco Nunes)
+Date: Sat, 19 May 2007 04:14:00 +0100
+Subject: [Griffith-devel] French translation update
+In-Reply-To: <200705182302.44400.guillaume@guillaumepratte.net>
+References: <200705182302.44400.guillaume@guillaumepratte.net>
+Message-ID: <95E98BF3-147E-41BB-BB14-6395550D3771@gmail.com>
+
+Thanks!
+
+Commited to svn now.
+
+Greetings,
+
+On 2007/05/19, at 04:02, Guillaume Pratte wrote:
+
+> <griffith_svn_fr.po.patch>
+
+---
+Vasco Nunes
+<vasco.m.nunes at gmail.com>
+
+
+
+
+

@@ -1,0 +1,30 @@
+From gkaroly at gmail.com  Wed Oct 24 18:39:30 2007
+From: gkaroly at gmail.com (=?ISO-8859-1?Q?Gossler_K=E1roly?=)
+Date: Wed, 24 Oct 2007 18:39:30 +0200
+Subject: [Griffith-devel] small patch
+Message-ID: <2047db380710240939t39c1681axbb1c2080389c225d@mail.gmail.com>
+
+Hello,
+
+Here is a small griffith patch.
+
+-- 
+Gossler K?roly
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: loaned_with_markers.patch
+Type: text/x-patch
+Size: 803 bytes
+Desc: not available
+URL: <https://lists.berlios.de/pipermail/griffith-devel/attachments/20071024/cd122365/attachment.bin>
+
+From no-reply at brothersoft.com  Thu Oct 25 09:35:40 2007
+From: no-reply at brothersoft.com (Brothersoft)
+Date: Thu, 25 Oct 2007 02:35:40 -0500
+Subject: [Griffith-devel] Your company information update request has been
+	accepted
+Message-ID: <ef4e0264aaca5bfdf5c6f5930e9c3730@admin.brothersoft.com>
+
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/griffith-devel/attachments/20071025/27e568b9/attachment.html>
+

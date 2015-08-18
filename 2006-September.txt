@@ -1,0 +1,47 @@
+From ryan2057 at gmx.de  Fri Sep 15 10:46:00 2006
+From: ryan2057 at gmx.de (M.W.)
+Date: Fri, 15 Sep 2006 10:46:00 +0200
+Subject: [Griffith-devel] minor update to the german language file
+Message-ID: <450A6848.9040304@gmx.de>
+
+Hi,
+
+I have changed a few spelling mistakes in the de.po file and added two
+comments on two strings that need clarification before I can translate them.
+Grimmwolf
+-------------- next part --------------
+An embedded and charset-unspecified text was scrubbed...
+Name: de.po
+URL: <https://lists.berlios.de/pipermail/griffith-devel/attachments/20060915/1b13365e/attachment.ksh>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: signature.asc
+Type: application/pgp-signature
+Size: 187 bytes
+Desc: OpenPGP digital signature
+URL: <https://lists.berlios.de/pipermail/griffith-devel/attachments/20060915/1b13365e/attachment.pgp>
+
+From ozarow at gmail.com  Fri Sep 15 22:08:39 2006
+From: ozarow at gmail.com (Piotr Ozarowski)
+Date: Fri, 15 Sep 2006 22:08:39 +0200
+Subject: [Griffith-devel] minor update to the german language file
+In-Reply-To: <450A6848.9040304@gmx.de>
+References: <450A6848.9040304@gmx.de>
+Message-ID: <20060915200839.GA26056@pox.one.pl>
+
+> I have changed a few spelling mistakes in the de.po file and added two
+> comments on two strings that need clarification before I can translate them.
+
+Thanks, changes committed
+
+-- 
+-=[     Piotr Ozarowski     ]=-
+-=[ http://www.ozarowski.pl ]=-
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: not available
+Type: application/pgp-signature
+Size: 189 bytes
+Desc: not available
+URL: <https://lists.berlios.de/pipermail/griffith-devel/attachments/20060915/75af63ac/attachment.pgp>
+

@@ -1,0 +1,112 @@
+From agutierr at gsyc.es  Thu Sep 18 17:53:32 2008
+From: agutierr at gsyc.es (Antonio =?ISO-8859-1?Q?Guti=E9rrez?= Mayoral)
+Date: Thu, 18 Sep 2008 17:53:32 +0200
+Subject: [Griffith-devel] Hello all! help with the spanish traslation
+Message-ID: <1221753212.6577.17.camel@pimiento>
+
+Hello all!
+
+My name is Antonio and I am a linux user from Madrid, Spain. I have to
+say that I have been using this program since two days ago and its
+great!! I like it so much. For this reason I would like to work on that
+things that neccesary.
+
+I have seen that there isnt traslation to spanish of the griffith web
+site, I just want to say that I can help on this translation (if
+possible and desired), as well as some Errata on the spanish translation
+of the application ("Herrameintas" instead of "Herramientas", "Codeces"
+instead of "C?decs", "Necisitas" instead of "Necesitas", etc).
+
+Anyway, so much thanks for the development of this program.
+
+Un saludo,
+
+Antonio.
+
+
+-- 
+Antonio Guti?rrez Mayoral         | Dpto. Sist. Telem?ticos/Computaci?n
+agutierr {at} gsyc.es             | Grupo de Sistemas y Comunicaciones
+Tel: (+34) 91 664 74 67           | Edif. Departamental II - Despacho 109
+http://www.agutierr.org           | Universidad Rey Juan Carlos
+http://www.urjc.es                | Tulip?n s/n 2833 M?stoles, Madrid.
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: signature.asc
+Type: application/pgp-signature
+Size: 189 bytes
+Desc: Esta parte del mensaje est? firmada	digitalmente
+URL: <https://lists.berlios.de/pipermail/griffith-devel/attachments/20080918/0992afa3/attachment.pgp>
+
+From ozarow at gmail.com  Sun Sep 28 22:30:33 2008
+From: ozarow at gmail.com (Piotr =?utf-8?Q?O=C5=BCarowski?=)
+Date: Sun, 28 Sep 2008 22:30:33 +0200
+Subject: [Griffith-devel] Hello all! help with the spanish traslation
+In-Reply-To: <1221753212.6577.17.camel@pimiento>
+References: <1221753212.6577.17.camel@pimiento>
+Message-ID: <20080928203033.GA17855@piotro.eu>
+
+Hi Antonio,
+
+[Antonio Guti?rrez Mayoral, 2008-09-18]
+> My name is Antonio and I am a linux user from Madrid, Spain. I have to
+> say that I have been using this program since two days ago and its
+> great!! I like it so much. For this reason I would like to work on that
+> things that neccesary.
+
+great :-)
+
+There's a page on wiki [1] where you can pick something (f.e. we really
+need someone to write/update the docs)
+
+[1] http://wiki.griffith.cc/Contribute
+ 
+> I have seen that there isnt traslation to spanish of the griffith web
+> site, I just want to say that I can help on this translation (if
+> possible and desired), as well as some Errata on the spanish translation
+> of the application ("Herrameintas" instead of "Herramientas", "Codeces"
+> instead of "C?decs", "Necisitas" instead of "Necesitas", etc).
+
+https://translations.launchpad.net/griffith/trunk/+pots/griffith/es/+translate
+
+contact me in private about the homepage translation, I'll create an
+account for you.
+
+-- 
+-=[     Piotr O?arowski     ]=-
+-=[ http://www.ozarowski.pl ]=-
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: not available
+Type: application/pgp-signature
+Size: 197 bytes
+Desc: not available
+URL: <https://lists.berlios.de/pipermail/griffith-devel/attachments/20080928/80cd3879/attachment.pgp>
+
+From ozarow at gmail.com  Sun Sep 28 22:45:27 2008
+From: ozarow at gmail.com (Piotr =?utf-8?Q?O=C5=BCarowski?=)
+Date: Sun, 28 Sep 2008 22:45:27 +0200
+Subject: [Griffith-devel] wiki, griffith.cc emails
+Message-ID: <20080928204527.GB17855@piotro.eu>
+
+Hi,
+
+I've moved our wiki to the new domain (new address:
+http://wiki.griffith.cc). There are rewrite rules on berlios so that old
+wiki will redirect users to the right place, I've also added the same
+rules in old forum.
+
+While I was playing with the domain stuff, I also added few email
+aliases. If a contributor wants a fancy name at griffith.cc email address -
+contact me in private.
+-- 
+-=[     Piotr O?arowski     ]=-
+-=[ http://www.ozarowski.pl ]=-
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: not available
+Type: application/pgp-signature
+Size: 197 bytes
+Desc: not available
+URL: <https://lists.berlios.de/pipermail/griffith-devel/attachments/20080928/a9006749/attachment.pgp>
+

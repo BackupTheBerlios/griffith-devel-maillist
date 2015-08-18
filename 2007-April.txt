@@ -1,0 +1,56 @@
+From mdtje at hotmail.com  Sun Apr  1 15:52:20 2007
+From: mdtje at hotmail.com (Marcel Dijkstra)
+Date: Sun, 1 Apr 2007 15:52:20 +0200
+Subject: [Griffith-devel] Dutch Translation for Griffith
+Message-ID: <BAY126-W127953F89138BADADFEE8BD610@phx.gbl>
+
+
+Hello, 
+
+I've made a Dutch translation for Griffith. 
+I hope you can include this in the next release of your program.
+
+I've included the .po file and the .mo file in the attached tar-file.
+
+If you have any questions, feel free to send me an e-mail.
+
+
+Kind regards,
+
+Marcel Dijkstra
+_________________________________________________________________
+Probeer Live.nl 
+Probeer Live.nl: zoekmachine van de makers van MSN! 
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: nl.tar.gz
+Type: application/x-gzip
+Size: 21679 bytes
+Desc: not available
+URL: <https://lists.berlios.de/pipermail/griffith-devel/attachments/20070401/178cc740/attachment.bin>
+
+From ozarow at gmail.com  Sun Apr  1 16:50:05 2007
+From: ozarow at gmail.com (Piotr Ozarowski)
+Date: Sun, 1 Apr 2007 16:50:05 +0200
+Subject: [Griffith-devel] Dutch Translation for Griffith
+In-Reply-To: <BAY126-W127953F89138BADADFEE8BD610@phx.gbl>
+References: <BAY126-W127953F89138BADADFEE8BD610@phx.gbl>
+Message-ID: <20070401145005.GW17341@pox.one.pl>
+
+[Marcel Dijkstra, 01.04.2007]
+> I've made a Dutch translation for Griffith. 
+> I hope you can include this in the next release of your program.
+
+Thanks, commited in SVN :-)
+
+-- 
+-=[     Piotr Ozarowski     ]=-
+-=[ http://www.ozarowski.pl ]=-
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: not available
+Type: application/pgp-signature
+Size: 189 bytes
+Desc: not available
+URL: <https://lists.berlios.de/pipermail/griffith-devel/attachments/20070401/804c88da/attachment.pgp>
+

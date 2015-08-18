@@ -1,0 +1,21 @@
+From mikej06 at hotmail.com  Mon Nov 10 18:19:13 2008
+From: mikej06 at hotmail.com (Michael Jahn)
+Date: Mon, 10 Nov 2008 17:19:13 +0000
+Subject: [Griffith-devel] Release 0.9.8
+Message-ID: <BLU106-W3449F8BCB008E5A81A30D2A91A0@phx.gbl>
+
+
+Hi,
+
+I think it is time for a new release.
+What do you think about it ?
+
+Michael
+
+_________________________________________________________________
+Messenger Online Treff: Spontan chatten, ?ber Hobbies reden, sofort Spass haben? Jetzt klicken!
+http://redirect.gimas.net/?n=M0811xMOTDE
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/griffith-devel/attachments/20081110/eb9408ad/attachment.html>
+

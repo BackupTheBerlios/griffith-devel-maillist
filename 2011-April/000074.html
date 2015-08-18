@@ -1,0 +1,203 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Griffith-devel] patch for searching for any field
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/griffith-devel/2011-April/index.html" >
+   <LINK REL="made" HREF="mailto:griffith-devel%40lists.berlios.de?Subject=Re%3A%20%5BGriffith-devel%5D%20patch%20for%20searching%20for%20any%20field&In-Reply-To=%3CBANLkTimjaOZsNudMbjmTWh3sN5h2sEhjcA%40mail.gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000073.html">
+   <LINK REL="Next"  HREF="000075.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Griffith-devel] patch for searching for any field</H1>
+    <B>Daniel Fetchinson</B> 
+    <A HREF="mailto:griffith-devel%40lists.berlios.de?Subject=Re%3A%20%5BGriffith-devel%5D%20patch%20for%20searching%20for%20any%20field&In-Reply-To=%3CBANLkTimjaOZsNudMbjmTWh3sN5h2sEhjcA%40mail.gmail.com%3E"
+       TITLE="[Griffith-devel] patch for searching for any field">fetchinson at googlemail.com
+       </A><BR>
+    <I>Wed Apr 27 12:40:13 CEST 2011</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000073.html">[Griffith-devel] patch for searching for any field
+</A></li>
+        <LI>Next message: <A HREF="000075.html">[Griffith-devel] New search plugin to Interfilmes.com and a problem
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#74">[ date ]</a>
+              <a href="thread.html#74">[ thread ]</a>
+              <a href="subject.html#74">[ subject ]</a>
+              <a href="author.html#74">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>&gt;<i> We talk about different things.
+</I>
+Probably!
+
+&gt;<i> Typeahead search works directly within the main list.
+</I>&gt;<i> Set the focus at any movie entry in the main list and then just type in
+</I>&gt;<i> the part of a movie or director.
+</I>&gt;<i> While your are typing the focus jumps through the list to the next
+</I>&gt;<i> matching entry.
+</I>
+Wow, I did not know that! Pretty cool, one question: if the first
+match is found, how do I jump to the next matching entry and then the
+next?
+
+&gt;<i> It works without using the drop down list.
+</I>&gt;<i>
+</I>&gt;<i> The answer for your question:
+</I>&gt;<i> You don't have to edit the glade files. The entries in the drop down
+</I>&gt;<i> list are generated in the code.
+</I>&gt;<i> Look into the file initialize.py, function
+</I>&gt;<i> def dictionaries(self):
+</I>&gt;<i> in line 771:
+</I>&gt;<i> self.search_criteria = (
+</I>&gt;<i> Here is the list of the defined fields. Every field in search_criteria
+</I>&gt;<i> needs an entry in the following
+</I>&gt;<i> list field_names with the same key.
+</I>&gt;<i> The main problem is that field_names should only contain physically
+</I>&gt;<i> existing database columns I think.
+</I>&gt;<i> I didn't try to add non-db fields.
+</I>&gt;<i> So I think it would be better if you add the entry 'Any' to the list
+</I>&gt;<i> search_criteria_sorted
+</I>&gt;<i> in line 732 before the loop
+</I>&gt;<i> for criteria in sorted_criterias:
+</I>
+Thanks a lot, this helps a lot, I'll try implementing this.
+
+Cheers,
+Daniel
+
+
+&gt;<i> ...
+</I>&gt;<i>
+</I>&gt;<i> Michael
+</I>&gt;<i>
+</I>&gt;<i> Am 26.04.2011 14:12, schrieb Daniel Fetchinson:
+</I>&gt;&gt;&gt;<i> Perhaps I'm wrong but I thought it would partiallly fit your needs to
+</I>&gt;&gt;&gt;<i> look for a movie by just typing in a part of the title or director.
+</I>&gt;&gt;&gt;<i> Without opening an extra window.
+</I>&gt;&gt;<i> If I type in part of the title I only get the right result if 'Title'
+</I>&gt;&gt;<i> is selected from the drop down list. Similarly if I type in part of
+</I>&gt;&gt;<i> the director I get the right result only if 'Director' is selected
+</I>&gt;&gt;<i> from said list.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> What I'm after is an item on the drop down list called 'Any' which I
+</I>&gt;&gt;<i> would set for my default and then typing in either the title or the
+</I>&gt;&gt;<i> director (or any other field) would give me the expected result. In
+</I>&gt;&gt;<i> this way you only have to type and don't have to select anything so
+</I>&gt;&gt;<i> this way of doing things would be the fastest and most convenient.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> By the way, the only thing I'm missing at the moment is a little help
+</I>&gt;&gt;<i> with glade (the actual query in python is done now) so that really a
+</I>&gt;&gt;<i> new item on the drop down list would appear. I'm guessing I have to
+</I>&gt;&gt;<i> modify some of the .glade files, but don't know how. Is anyone
+</I>&gt;&gt;<i> familiar with glade? Are these files edited by hand or only through
+</I>&gt;&gt;<i> glade-2 or glade-3?
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Cheers,
+</I>&gt;&gt;<i> Daniel
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i> Do you know the type ahead feature of the main list?
+</I>&gt;&gt;&gt;&gt;&gt;<i> No, I don't. But sounds good, what is it?
+</I>&gt;&gt;&gt;&gt;<i> You mean perhaps the feature that as I type the already typed query
+</I>&gt;&gt;&gt;&gt;<i> gets searched for within a predefined short time interval? Yeah, I
+</I>&gt;&gt;&gt;&gt;<i> know that one, it's pretty cool!
+</I>&gt;&gt;&gt;&gt;<i> But how does this has to do with the ability to search for *any* field
+</I>&gt;&gt;&gt;&gt;<i> from the main list?
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> Cheers,
+</I>&gt;&gt;&gt;&gt;<i> Daniel
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;<i> I'm sending a patch against trunk which makes it possible to
+</I>&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;<i> search
+</I>&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;<i> for many fields ( 'director', 'title', 'original_title',
+</I>&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;<i> 'cameraman',
+</I>&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;<i> 'cast', 'year', 'country', 'notes' ) at once, i.e. all of them
+</I>&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;<i> OR'd
+</I>&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;<i> together.
+</I>&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;<i> The patch only touches lib/quick_filter.py and in order to have
+</I>&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;<i> this
+</I>&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;<i> what's wrong with advance filter window (wich allows this and much
+</I>&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;<i> more)?
+</I>&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;<i> There is nothing wrong with that in terms of &quot;what's possible&quot;, it's
+</I>&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;<i> more like a usability feature. I think it's much more convenient to
+</I>&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;<i> type whatever comes to mind (director, title, etc) into a field that
+</I>&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;<i> is always there than opening up a second window and typing things
+</I>&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;<i> into
+</I>&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;<i> their respective fields.
+</I>&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;<i> So I'd ask, &quot;what's wrong with making things simpler from a user
+</I>&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;<i> experience point of view?&quot;  :)
+</I>&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;<i> The music catalogue software rhythmbox (which is very much like
+</I>&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;<i> griffith only for audio) allows for a quick search for any field on
+</I>&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;<i> its main window and I have to say I love the feature (and rhythmbox
+</I>&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;<i> gave me the idea that I should patch griffith in this way).
+</I>&gt;&gt;&gt;&gt;&gt;&gt;&gt;<i> I included a new patch because I used 'original_title' in place of
+</I>&gt;&gt;&gt;&gt;&gt;&gt;&gt;<i> 'o_title' in the previous one.
+</I>&gt;&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;&gt;<i> Cheers,
+</I>&gt;&gt;&gt;&gt;&gt;&gt;&gt;<i> Daniel
+</I>&gt;&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;&gt;<i> _______________________________________________
+</I>&gt;&gt;&gt;&gt;&gt;&gt;&gt;<i> Griffith-devel mailing list
+</I>&gt;&gt;&gt;&gt;&gt;&gt;&gt;<i> <A HREF="https://lists.berlios.de/mailman/listinfo/griffith-devel">Griffith-devel at lists.berlios.de</A>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;&gt;<i> <A HREF="https://lists.berlios.de/mailman/listinfo/griffith-devel">https://lists.berlios.de/mailman/listinfo/griffith-devel</A>
+</I>&gt;&gt;&gt;&gt;&gt;<i> --
+</I>&gt;&gt;&gt;&gt;&gt;<i> Psss, psss, put it down! - <A HREF="http://www.cafepress.com/putitdown">http://www.cafepress.com/putitdown</A>
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> _______________________________________________
+</I>&gt;&gt;&gt;<i> Griffith-devel mailing list
+</I>&gt;&gt;&gt;<i> <A HREF="https://lists.berlios.de/mailman/listinfo/griffith-devel">Griffith-devel at lists.berlios.de</A>
+</I>&gt;&gt;&gt;<i> <A HREF="https://lists.berlios.de/mailman/listinfo/griffith-devel">https://lists.berlios.de/mailman/listinfo/griffith-devel</A>
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> Griffith-devel mailing list
+</I>&gt;<i> <A HREF="https://lists.berlios.de/mailman/listinfo/griffith-devel">Griffith-devel at lists.berlios.de</A>
+</I>&gt;<i> <A HREF="https://lists.berlios.de/mailman/listinfo/griffith-devel">https://lists.berlios.de/mailman/listinfo/griffith-devel</A>
+</I>&gt;<i>
+</I>
+
+-- 
+Psss, psss, put it down! - <A HREF="http://www.cafepress.com/putitdown">http://www.cafepress.com/putitdown</A>
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000073.html">[Griffith-devel] patch for searching for any field
+</A></li>
+	<LI>Next message: <A HREF="000075.html">[Griffith-devel] New search plugin to Interfilmes.com and a problem
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#74">[ date ]</a>
+              <a href="thread.html#74">[ thread ]</a>
+              <a href="subject.html#74">[ subject ]</a>
+              <a href="author.html#74">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/griffith-devel">More information about the Griffith-devel
+mailing list</a><br>
+</body></html>

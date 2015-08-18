@@ -1,0 +1,74 @@
+From knitter.is at gmail.com  Tue Dec  4 15:04:29 2007
+From: knitter.is at gmail.com (Sergio Lopes)
+Date: Tue, 4 Dec 2007 14:04:29 +0000
+Subject: [Griffith-devel] Database structure
+Message-ID: <3a7129160712040604k5bc9b5d8r46742ee75c1de398@mail.gmail.com>
+
+Hi,
+I recently found this project and, as I'm also creating a similar
+program, thought of offering import/export capabilities in my software
+so that users could easily switch between both softwares. With that in
+mind I wanted to ask if the developers have a formal description of
+the database structure, ER diagram would be nice, along with field
+types and constraints. Is there such documentation? It would be easier
+for me to have a description of the database instead of going through
+the code and/or database structure in a server.
+
+-- 
+Best regards,
+
+S?rgio Lopes
+
+
+From ozarow at gmail.com  Sun Dec  9 14:42:37 2007
+From: ozarow at gmail.com (POX)
+Date: Sun, 9 Dec 2007 14:42:37 +0100
+Subject: [Griffith-devel] I'm a live :)
+Message-ID: <b1be9b350712090542i365ba01kadcf59583ad9d13c@mail.gmail.com>
+
+Hi guys,
+
+I just wanted to say that I'm still alive and I'll try to work on
+Griffith soon (SQLAlchemy 0.4 compatibility issue is really urgent, I
+know).
+
+Why I'm not active lately? I'm spending >10 hours at work and
+additionally my motherboard died 2 weeks ago :-(
+
+
+From vasco.m.nunes at gmail.com  Sun Dec  9 15:56:39 2007
+From: vasco.m.nunes at gmail.com (Vasco Nunes)
+Date: Sun, 9 Dec 2007 14:56:39 +0000
+Subject: [Griffith-devel] I'm a live :)
+In-Reply-To: <b1be9b350712090542i365ba01kadcf59583ad9d13c@mail.gmail.com>
+References: <b1be9b350712090542i365ba01kadcf59583ad9d13c@mail.gmail.com>
+Message-ID: <3D651A75-20E8-40C1-9476-CEDF1F50001F@gmail.com>
+
+Nice to see you are ok, Piotr.
+Well, work is taking my whole time too and work on Griffith is almost  
+impossible these days.
+Will try to find some available time soon.
+Too bad about your mobo :(
+
+#----------------------------------------#
+Vasco Nunes
+vasco.m.nunes at gmail.com
+#----------------------------------------#
+
+On Dec 9, 2007, at 1:42 PM, POX wrote:
+
+> Hi guys,
+>
+> I just wanted to say that I'm still alive and I'll try to work on
+> Griffith soon (SQLAlchemy 0.4 compatibility issue is really urgent, I
+> know).
+>
+> Why I'm not active lately? I'm spending >10 hours at work and
+> additionally my motherboard died 2 weeks ago :-(
+> _______________________________________________
+> Griffith-devel mailing list
+> Griffith-devel at lists.berlios.de
+> https://lists.berlios.de/mailman/listinfo/griffith-devel
+
+
+
